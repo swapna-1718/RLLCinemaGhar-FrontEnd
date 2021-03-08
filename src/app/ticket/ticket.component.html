@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<body>
+<blockquote class="blockquote">
+   
+        <h2  class="text-center" style="color:rgb(255, 0, 34);" ><b>LIGHTS-CAMERA-ACTION</b></h2>
+       
+        
+    <h2  class="text-center" style="color:rgb(255, 0, 119);" ><b>It's time for</b></h2>
+
+    <h2  class="text-center" style="color:rgb(225, 0, 255);" ><b>MOVIE</b></h2> 
+
+</blockquote>
+  <div class="container custom-container-2" >
+  
+    
+    <div class="no-data text-center" >
+     
+        <h2  class="text-center" style="color:rgb(255, 217, 0);"><b>GET YOUR TICKET HERE</b></h2>
+    </div>
+    
+     
+
+      <div class="col-md-12" >
+        <table class="table table-warning" style="background-color: #1ae9de;">
+          <thead class= "table table-dark">
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">User Name</th>
+              <th scope="col">Movie name</th>
+              <th scope="col">Theater Name</th>
+              
+              <th scope="col">Seat NO</th>
+              <th scope="col">Book Date</th>
+              <th scope="col">Status</th>
+            
+             
+            </tr>
+          </thead>
+
+
+          <tbody>
+            <tr *ngFor="let tk of Ticket">
+             
+              <td>{{tk.id}}</td>
+              <td>{{tk.name}}</td>
+              <td>{{tk.movName}}</td>
+              <td>{{tk.theaterName}}</td>
+              <td>{{tk.seatNo}}</td>
+              <td>{{tk.bookDate}}</td>
+              <td>{{tk.status}}</td>
+            
+              
+             
+
+            
+            </tr>
+          </tbody>
+          </table>
+    </div>
+  
+  </div>
+
+</body>

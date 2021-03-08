@@ -1,0 +1,46 @@
+.btn-sq-lg {
+    width: 250px ;
+    height: 150px;
+  }
+  
+  .btn-sq {
+    width: 100px ;
+    height: 100px ;
+    font-size: 10px;
+  }
+  
+  .btn-sq-sm {
+    width: 50px ;
+    height: 50px ;
+    font-size: 10px;
+  }
+  
+  .btn-sq-xs {
+    width: 25px ;
+    height: 25px;
+    padding:2px;
+  }
+  
+  div{
+      padding: auto;
+      margin-left: 70px;
+      margin-top: 40px;
+      
+  }
+  table, th, td {
+    border: 1px solid rgb(241, 2, 2);
+  }
+  table {
+    width: 100%;
+      
+  }
+
+
+
+  p {
+    color: rgb(4, 90, 40);
+    font-weight: 400;
+  }
+  tr:hover {background-color: rgba(255, 255, 0, 0.24);}
+
+  

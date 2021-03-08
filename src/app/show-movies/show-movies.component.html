@@ -1,0 +1,58 @@
+<blockquote class="blockquote">
+    
+</blockquote>
+<div class="container custom-container-2">
+
+ 
+  <div class="no-data text-center" *ngIf="Movies.length == 0">
+    <p>Add Movies!</p>
+   
+ 
+  </div>
+
+ 
+  <div *ngIf="Movies.length !== 0">
+    <h3 class="mb-3 text-center">Movie List</h3>
+
+
+    
+
+
+    <div class="col-md-12">
+      <table class="table table-striped table-primary table-hover">
+        <thead class="table table-striped table-dark" >
+          <tr>
+            <th scope="col">Movie Id</th>
+            <th scope="col">Movie Title</th>
+            <th scope="col">Movie release Date</th>
+            <th scope="col">Movie Status</th>
+           
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movies of Movies">
+            <td>{{movies.id}}</td>
+            <td>{{movies.title}}</td>
+            <td>{{movies.date}}</td>
+            <td>{{movies.status}}</td>
+           
+            
+           
+
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+    
+  </div>
+
+  
+
+</div>

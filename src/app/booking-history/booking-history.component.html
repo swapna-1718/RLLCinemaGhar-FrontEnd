@@ -1,0 +1,68 @@
+<blockquote class="blockquote">
+    
+</blockquote>
+<div class="container custom-container-2">
+
+ 
+  <div class="no-data text-center" *ngIf="BookingDetails == 0">
+    <p>NO BOOKING details!</p>
+   
+ 
+  </div>
+
+ 
+  <div *ngIf="BookingDetails.length !== 0">
+    <h3 class="mb-3 text-center">Booking History</h3>
+
+
+    
+
+
+    <div class="col-md-12">
+      <table class="table table-striped table-primary table-hover">
+        <thead class="table table-striped table-dark" >
+          <tr>
+            <th scope="col">Book  Id</th>
+            <th scope="col">User name</th>
+            <th scope="col">Movie Name</th>
+            <th scope="col">Theater Name</th>
+            <th scope="col">Seat No</th>
+            <th scope="col">Book Date</th>
+            <th scope="col">Status</th>
+           
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bd of BookingDetails">
+            <td>{{bd.id}}</td>
+            <td>{{bd.name}}</td>
+            <td>{{bd.movName}}</td>
+            <td>{{bd.theaterName}}</td>
+            <td>{{bd.seatNo}}</td>
+            <td>{{bd.bookDate}}</td>
+            <td>{{bd.status}}</td>
+           
+           
+           
+           
+
+            
+           
+
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+    
+  </div>
+
+  
+
+</div>

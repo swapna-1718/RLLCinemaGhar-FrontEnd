@@ -1,0 +1,22 @@
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 5px;
+    font-size: 10px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    border-bottom: 1px solid #ddd;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+}
+

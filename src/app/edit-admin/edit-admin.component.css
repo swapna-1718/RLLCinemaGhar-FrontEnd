@@ -1,0 +1,29 @@
+body {
+    background-image: url('/assets/Images/theater.jpg');
+   background-size: cover;
+}
+
+*[role="form"] {
+   max-width: 600px;
+   padding: 20px; 
+   margin: auto;
+   margin-bottom:200px ;
+   border-radius: 0.3em;
+   background-color:rgb(48, 41, 32);
+  
+   color: rgb(240, 228, 240);
+}
+
+ h2 { 
+   font-family:'Times New Roman', Times, serif;
+   font-size: 30px;
+   font-weight: 600;
+   color: #fff6f6;
+   text-align: center;
+ 
+   
+}
+button{
+    width: 120px;
+    margin-left: auto;
+}

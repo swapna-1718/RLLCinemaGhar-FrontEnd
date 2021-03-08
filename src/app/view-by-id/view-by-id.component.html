@@ -1,0 +1,66 @@
+<blockquote class="blockquote">
+    
+</blockquote>
+<div class="container custom-container-2">
+
+ 
+  <div class="no-data text-center" *ngIf="Users.length == 0">
+    <p>Add User!</p>
+   
+ 
+  </div>
+
+ 
+  <div *ngIf="Users.length !== 0">
+    <h3 class="mb-3 text-center">My Profile</h3>
+
+   
+
+
+    <div class="col-md-12">
+      <table class="table table-striped table-primary table-hover">
+        <thead class="table table-striped table-dark" >
+          <tr>
+            <th scope="col">user Id</th>
+            <th scope="col">Email</th>
+            <th scope="col">password</th>
+            <th scope="col">Name</th>
+            <th scope="col">dob</th>
+            <th scope="col">gender</th>
+            <th scope="col"> Reg-date</th>
+            <th scope="col"> </th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{Users.id}}</td>
+            <td>{{Users.email}}</td>
+            <td>{{Users.pwd}}</td>
+            <td>{{Users.name}}</td>
+            <td>{{Users.dob}}</td>
+            <td>{{Users.gender}}</td>
+            <td>{{Users.date}}</td>
+            
+           
+
+           <td>
+            <button class="btn btn-outline-dark btn-sm" routerLink="/app-edit-user/{{Users.id}}"> Edit </button>
+            &nbsp;&nbsp;
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+    
+  </div>
+
+  
+
+</div>

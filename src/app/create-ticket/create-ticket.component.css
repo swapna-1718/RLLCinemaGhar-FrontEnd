@@ -1,0 +1,17 @@
+table, th, td {
+    border: 1px solid rgb(241, 2, 2);
+  }
+  table {
+    width: 100%;
+      
+  }
+
+
+
+  p {
+    color: rgb(4, 90, 40);
+    font-weight: 400;
+  }
+  tr:hover {background-color: rgba(255, 255, 0, 0.24);}
+
+  

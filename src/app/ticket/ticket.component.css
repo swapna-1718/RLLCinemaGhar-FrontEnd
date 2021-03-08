@@ -1,0 +1,28 @@
+table, th, td {
+    border: 1px solid rgb(241, 2, 2);
+  }
+  table {
+    width: 100%;
+      
+  }
+  body {
+    background-image: url('/assets/Images/MovieTicket.jpg');
+   background-size: cover;
+}
+
+
+
+  p {
+    color: rgb(4, 90, 40);
+    font-weight: 400;
+  }
+  tr:hover {background-color: rgba(255, 255, 0, 0.24);}
+
+  
+ .image{
+   float: left;
+ }
+
+ .col-md-12{
+   float:right;
+ }
