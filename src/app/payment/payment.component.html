@@ -18,16 +18,26 @@
                         </div>
                     </div>
                     <div class="card-body" style="height: 350px">
-                        <input id="cc-number" type="tel" class="input-lg form-control cc-number" 
+                        <input id="cc-number" type="tel"   class="input-lg form-control cc-number" 
              
-              autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required minlength="16"
-            required maxlength="16"  required >
+              autocomplete="cc-number" #card="ngModel" [(ngModel)]="UserDetails.card" placeholder="•••• •••• •••• ••••" required minlength="16"
+            required maxlength="16" [class.is-invalid]="card.invalid && card.touched"  >
+            <div *ngIf="card.errors && (card.invalid||card.touched)">
+                <small class="text-danger" *ngIf="card.errors.required">card number is required</small>
+                <small class="text-danger" *ngIf="card.errors.maxlength">must be 16 letters</small>
+              </div>
+
+
+
+
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group"> <label for="cc-exp" class="control-label">CARD EXPIRY</label> <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required> </div>
+                                <div class="form-group"> <label for="cc-exp" class="control-label">CARD EXPIRY</label> 
+                                    <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required> </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group"> <label for="cc-cvc" class="control-label">CARD CVC</label> <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required> </div>
+                                <div class="form-group"> <label for="cc-cvc" class="control-label">CARD CVV</label> 
+                                    <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="•••" required maxlength="3" required> </div>
                             </div>
                         </div>
                         <div class="form-group"> <label for="numeric" class="control-label">CARD HOLDER NAME</label> <input type="text" class="input-lg form-control"> </div>

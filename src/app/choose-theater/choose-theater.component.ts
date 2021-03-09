@@ -10,10 +10,10 @@ import { RestApiService } from '../shared/rest-api.service';
 export class ChooseTheaterComponent implements OnInit {
 
   @Input() Theater= {
-    name:'navrang',
-	t1:"",
+    name:'NAVARANG',
+	t1:'2.30PM',
 
-	date:""
+	date:''
   }
   public model:any;
 

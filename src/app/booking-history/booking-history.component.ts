@@ -16,5 +16,7 @@ export class BookingHistoryComponent implements OnInit {
   loadTicket() {
     return this.restApi.getTicket().subscribe((data: {}) => {this.BookingDetails = data;})
   }
+ 
+ 
 
 }

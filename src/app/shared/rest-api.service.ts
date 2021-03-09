@@ -15,9 +15,9 @@ import { TicketdetailsService } from './ticketdetails.service';
 })
 export class RestApiService {
 
-  // http://localhost:8088/EMSusingSprHib
+  // http://localhost:8081/EMSusingSprHib
   // Define API
-  apiURL = 'http://localhost:8085/RLLCinemaGhar1';
+  apiURL = 'http://localhost:8081/RLLCinemaGhar1';
 
   constructor(private http: HttpClient) { }
 

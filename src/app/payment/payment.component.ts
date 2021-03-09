@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class PaymentComponent implements OnInit {
 
   constructor(private router: Router){ }
-
+  @Input() UserDetails = { card:'' }
   ngOnInit(): void {
   }
   btnClick()  {  

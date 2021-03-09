@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RestApiService } from '../shared/rest-api.service';
 
@@ -8,7 +9,9 @@ import { RestApiService } from '../shared/rest-api.service';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent implements OnInit {
-
+form=new FormGroup({
+  email: new FormControl('',Validators.required)
+})
 
   
   @Input()  

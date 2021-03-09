@@ -19,19 +19,51 @@
         <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
         </div>
-        <input name="email" class="form-control" placeholder="Email address *" type="email" [(ngModel)]="UserDetails.email" required>
+        <input name="email"  #email="ngModel" minlength="10" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required
+        [class.is-invalid]="email.invalid && email.touched" 
+         email="email" class="form-control" 
+        placeholder="Email address *" type="email" [(ngModel)]="UserDetails.email" >
+        <div *ngIf="email.errors && (email.invalid||email.touched)">
+            <small class="text-danger" *ngIf="email.errors.required">email is required</small>
+            <small class="text-danger" *ngIf="email.errors.pattern">Invalid email </small>
+          </div>
     </div>
     <div class="form-group input-group">
         <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
         </div>
-        <input type="password" name="password" class="form-control" placeholder="Create password *"  [(ngModel)]="UserDetails.pwd" required="required">
+     
+
+        <input type="password" name="password" #pwd="ngModel" required minlength="8" 
+        [class.is-invalid]="pwd.invalid && pwd.touched" 
+        class="form-control" placeholder="Create password *"  [(ngModel)]="UserDetails.pwd" required="required">
+        <div *ngIf="pwd.errors && (pwd.invalid||pwd.touched)">
+            <small class="text-danger" *ngIf="pwd.errors.required">password is required</small>
+            <small class="text-danger" *ngIf="pwd.errors.minlength">must be 8 letters</small>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
     </div>
     <div class="form-group input-group">
         <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
         </div>
-        <input name=" name" class="form-control" placeholder="Full name *" type="text" [(ngModel)]="UserDetails.name" required="required">
+        <input type="text" name="name" #name="ngModel" required minlength="4" 
+        [class.is-invalid]="name.invalid && name.touched" 
+        class="form-control" placeholder="Full name *"  [(ngModel)]="UserDetails.name" required="required">
+        <div *ngIf="name.errors && (name.invalid||name.touched)">
+            <small class="text-danger" *ngIf="name.errors.required">name is required</small>
+            <small class="text-danger" *ngIf="name.errors.minlength">must be 4 letters</small>
+          </div>
     </div>
 
 
@@ -42,7 +74,12 @@
         </div>
 
 
-        <input type="date" name="date" id="birthDate" class="form-control"  [(ngModel)]="UserDetails.dob" required="required">
+        <input type="date" name="date"  #dob="ngModel" id="birthDate" [class.is-invalid]="dob.invalid && dob.touched" 
+        class="form-control"  
+        [(ngModel)]="UserDetails.dob" required="required">
+        <div *ngIf="dob.errors && (dob.invalid||dob.touched)">
+            <small class="text-danger" *ngIf="dob.errors.required">Date of Birth is required</small>
+        </div>
     </div>
     <div class="form-group input-group">
         <div class="input-group-prepend">
@@ -51,9 +88,13 @@
 
         <div class="form-check-inline">
             <label class="form-check-label" for="male" style="color: bisque;">
-                <input type="radio" class="form-check-input" id=" male" name="gender" value="male"   
-                [(ngModel)]="UserDetails.gender" checked> Male
+                <input type="radio" #gender="ngModel" id=" male" name="gender" value="male" [class.is-invalid]="gender.invalid && gender.touched"   
+                class="form-check-input" [(ngModel)]="UserDetails.gender" checked> Male
+                <div *ngIf="gender.errors && (gender.invalid||gender.touched)">
+                    <small class="text-danger" *ngIf="gender.errors.required">required!</small>
+                </div>
             </label>
+            
         </div>
 
         <div class="form-check-inline">
@@ -78,7 +119,12 @@
     </div>
 
 
-    <input type="date" id="RegistrationDate" class="form-control"  name="date" [(ngModel)]="UserDetails.date" required="required">
+    <input type="date"  #date="ngModel" id="RegistrationDate"  name="date" 
+    [class.is-invalid]="date.invalid && date.touched" 
+    class="form-control" [(ngModel)]="UserDetails.date" required="required">
+    <div *ngIf="date.errors && (date.invalid||date.touched)">
+        <small class="text-danger" *ngIf="date.errors.required">Required</small>
+    </div>
 </div>
 
    
