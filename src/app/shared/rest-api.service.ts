@@ -15,7 +15,6 @@ import { TicketdetailsService } from './ticketdetails.service';
 })
 export class RestApiService {
 
-  // http://localhost:8081/EMSusingSprHib
   // Define API
   apiURL = 'http://localhost:8081/RLLCinemaGhar1';
 
@@ -32,7 +31,7 @@ export class RestApiService {
     })
   }  
 
-  // HttpClient API get() method => Fetch employees list
+  // HttpClient API get() method => Fetch user list
   getUsers(): Observable<UserService> {
     return this.http.get<UserService>(this.apiURL + '/admin/getAllUser')
     .pipe(
@@ -52,7 +51,7 @@ export class RestApiService {
   }*/
 
 
-  // HttpClient API get() method => Fetch employee
+  // HttpClient API get() method => Fetch users
   getUser(id: string): Observable<UserService> {
     return this.http.get<UserService>(this.apiURL + '/getById/' + id ,this.httpOptions )
     .pipe(
@@ -78,7 +77,7 @@ export class RestApiService {
     )
   }
 
-  // HttpClient API delete() method => Delete employee
+  // HttpClient API delete() method => Delete user
   deleteUser(id: string){
     return this.http.delete<UserService>(this.apiURL + '/delete/' + id, this.httpOptions)
     .pipe(
